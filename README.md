@@ -5,6 +5,10 @@ This is the starter code for Would You Rather App.
 The `_DATA.js` file represents a fake database and methods that let you access the data. 
 The `API.js` file represents the data access layer to call the Database.
 
+## OverView
+- the App helps you practice Redux in Real React Application
+- The Application allows you to post a question and can mainly view sum of the results. Also, allows you to submit an answer and View user leader board.
+
 Reminder to Just run the command `npm install` before coding.
 
 ## Views Structure
