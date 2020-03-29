@@ -9,6 +9,7 @@ import NavBarComponent from './NavBarComponent';
 import Login from './Login';
 import {Grid} from 'semantic-ui-react';
 import QuestionCard from './QuestionCard';
+import NotFound from './NotFound';
 
 const ContentGrid = ({ children }) => (
   <Grid padded="vertically" columns={1} centered>
@@ -41,14 +42,12 @@ class App extends Component {
             <Fragment>
               <NavBarComponent />
               <ContentGrid>
-                    {/* <Switch> */}
                       <Route exact path="/" component={Home} />
-                      {/* <Route path="/questions/bad_id" component={NoMatch} /> */}
+                      <Route path="/questions/bad_id" component={NotFound} />
                       <Route path="/questions/:question_id" component={QuestionCard} />
                       <Route path="/add-new" component={NewQuestions} />
                       <Route path="/leader-board" component={LeaderBoard} />
-                      {/* <Route component={NoMatch} /> */}
-                    {/* </Switch> */}
+                      <Route component={NotFound} />
               </ContentGrid>
             </Fragment>
           )}

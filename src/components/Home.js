@@ -14,7 +14,6 @@ class Home extends Component{
             <Container style={{ marginTop: '3em' }}>
                 <Tab panes={panes({ userQuestionData })} />
             </Container>
-              
         )
     }
 }
@@ -53,7 +52,6 @@ const panes = props => {
   };
 
 function mapStateToProps({ authedUser, users, questions }) {
-    debugger;
     const answeredIds = Object.keys(users[authedUser].answers);
     const answered = Object.values(questions)
       .filter(question => !answeredIds.includes(question.id))
